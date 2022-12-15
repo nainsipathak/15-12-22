@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Even or Odd</title>
+<script>
+function find(){
+var n= number(document.getElementById("number").value0;
+if(isNaN(n)) // is not a number
+	document.getElementById("result").innerHTML="<b style='color:blue'>You  must enter a number!</b>";
+else if(n<=0){
+	document.getElementById("result").innerHTML="<b style='color:blue'>You  must enter a number greater than 0!</b>";
+}
+else if(n%2==0)
+	document.getElementById("result").innerHTML="<b style='color:red'>Given number is an even.</b>";
+else
+	document.getElementById("result").innerHTML="<b style='color:red'>Given number is an odd.</b>";
+}
+</script>
+</head>
+<body>
+<form>
+<fieldset>
+<legend>Odd or even</legend>
+<label for="number">Number:</label>
+<input type="number" id="number" />
+<br/><br/>
+<input type="button" 
+	value="Find" 
+	onclick="find();" />
+<br/><br/>
+<span id="result" />
+</fieldset>	
+</form>		
+</body>
+</html>
+	

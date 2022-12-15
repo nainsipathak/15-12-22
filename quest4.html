@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- Design a webpage as 
+You need to put appropriate place holder text ,You need to validate email and website;Message text should be at least 15 characters length
+--!>
+<!DOCTYPE>
+<html>
+	<head>
+		<title>Form Here</title>
+		<script type="text/javascript">
+			function checkMessage(){
+				var message =document.getElementById('msg').value;
+				 if(message.length<15)
+				 {
+					document.getElementById('errormsg').innerHTML="Message text should be greater than 15 characters length";  
+				 }
+			}
+			function checkWebSite(){
+				var url =document.getElementById('website').value;
+				 if(isValidUrl(url))
+				 {
+					document.getElementById('errorwebsite').innerHTML="Valid Website"+url;  
+				 }       	 
+
+			}
+			function chechEmail(){
+				var email = document.getElementById("email").value;
+
+			}
+			function checkName(){
+				var name =document.getElementById('name').value;
+				if (name=='') {
+					document.getElementById('errorname').innerHTML="Enter name";
+				}
+			}	
+		</script>
+		<style type="text/css">
+		.firstdiv
+		{
+			width: 750px;
+			height: 300px;
+		}
+		</style>
+
+	</head>
+	<body >
+		<form name="form1">
+			<div class="firstdiv" >
+				<p><b>Form Here</p>
+				<p style="color: red;">* required fields</p><hr/>
+						<label>Name:</label>
+						<input type="text" name="name" id="name" onblur="checkName();" placeholder="placeholder text">
+							<span style=" color: #FFFFFF; background-color: red;" id="errorname" ></span><br/><br/>
+
+						<label>Email:</label>
+						<input type="email" name="email" id="email" onblur="checkEmail();"  placeholder="placeholder text" />
+							<span style=" color: red;" id="erroremail" ></span><br/><br/>
+
+						<label>Website:</label>
+						<input type="website" name="website" id="website" onblur="checkWebSite();" placeholder="placeholder text" required="" >
+							<span style=" color: red;" id="errorwebsite" ></span><br/><br/>	
+
+						<label for="msg">Message:</label>
+						<textarea  id="msg" name="msg" rows="4" cols="30"  ></textarea><br/><br/>
+						<span style=" color: red;" id="errormsg" ></span><br/><br/>	
+						<input type="button" value="Submit"  onclick="checkMessage();"/>				
+			</div>
+		</form>
+
+	</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Number or Character</title>
+		<style type="text/css">
+			.Button-design{
+				background-color: grey;
+				width:20%;
+				top: 10px;
+				font-size: 16px;
+				
+			}
+			b{
+				padding: 10px;
+			}
+		</style>
+		<script>
+			function find() {
+				
+				var x = document.getElementById("number").value;
+				
+				if(x=='a' || x=='e' || x=='i' || x=='o' || x=='u')
+					document.getElementById("result").innerHTML = "<b style='color:red'>"+x+" is a vowel</b>";
+				else if(x=='A' || x=='E' || x=='I' || x=='O' || x=='U') {
+					document.getElementById("result").innerHTML = "<b style='color:red'>"+x+" is a vowel</b>";
+				}
+				else if(x=='1' || x=='2' || x=='3' || x=='4' || x=='5'|| x=='6'|| x=='7'|| x=='8'|| x=='9'|| x=='0') {
+					document.getElementById("result").innerHTML = "<b style='color:green'>"+x+" is a number</b>";
+				}
+				else
+					document.getElementById("result").innerHTML = "<b style='color:green'>"+x+" is a consonant</b>";
+			}
+		</script>
+	</head>
+	
+	<body>
+		<form>
+			<fieldset>
+				<legend>Number or Character</legend>
+					Character: <input type="text" id="number" />
+					<br/>
+					<br/>
+					<input type="button" value="Ckeck" onclick="find();">
+					<br/>
+					<br/>
+					<div id="result" class="Button-design"></div>
+			</fieldset>
+		</form>	
+		
+	</body>
+
+</html>
